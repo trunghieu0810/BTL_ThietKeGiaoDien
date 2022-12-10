@@ -81,7 +81,7 @@ public class BangChuCai extends AppCompatActivity {
         buttonC.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                showDialog(R.drawable.chu_a, "Chữ C");
+                showDialog(R.drawable.chu_c, "Chữ C");
             }
         });
 
@@ -89,7 +89,7 @@ public class BangChuCai extends AppCompatActivity {
         buttonD.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                showDialog(R.drawable.chu_a, "Chữ D");
+                showDialog(R.drawable.chu_d, "Chữ D");
             }
         });
 
