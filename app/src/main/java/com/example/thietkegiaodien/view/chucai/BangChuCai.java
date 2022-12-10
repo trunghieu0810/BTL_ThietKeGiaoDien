@@ -3,6 +3,7 @@ package com.example.thietkegiaodien.view.chucai;
 import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.speech.tts.TextToSpeech;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
@@ -18,9 +19,12 @@ import com.example.thietkegiaodien.R;
 import com.example.thietkegiaodien.view.ViewMainActivity;
 import com.example.thietkegiaodien.view.convat.ConVat;
 
+import java.util.Locale;
+
 public class BangChuCai extends AppCompatActivity {
 
     private Button buttonBack;
+    private TextToSpeech textToSpeech;
     private ImageButton buttonA;
     private ImageButton buttonB;
     private ImageButton buttonC;
@@ -93,11 +97,155 @@ public class BangChuCai extends AppCompatActivity {
             }
         });
 
+        buttonE = (ImageButton) findViewById(R.id.imageButtonE);
+        buttonE.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showDialog(R.drawable.chu_e, "Chữ E");
+            }
+        });
+
+        buttonF = (ImageButton) findViewById(R.id.imageButtonF);
+        buttonF.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showDialog(R.drawable.chu_e, "Chữ F");
+            }
+        });
+
+        buttonE = (ImageButton) findViewById(R.id.imageButtonE);
+        buttonE.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showDialog(R.drawable.chu_f, "Chữ E");
+            }
+        });
+
+        buttonG = (ImageButton) findViewById(R.id.imageButtonG);
+        buttonG.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showDialog(R.drawable.chu_g, "Chữ G");
+            }
+        });
+
+        buttonH = (ImageButton) findViewById(R.id.imageButtonH);
+        buttonH.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showDialog(R.drawable.chu_h, "Chữ H");
+            }
+        });
+
+        buttonI = (ImageButton) findViewById(R.id.imageButtonI);
+        buttonI.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showDialog(R.drawable.chu_i, "Chữ I");
+            }
+        });
+
+        buttonK = (ImageButton) findViewById(R.id.imageButtonK);
+        buttonK.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showDialog(R.drawable.chu_k, "Chữ K");
+            }
+        });
+
+        buttonL = (ImageButton) findViewById(R.id.imageButtonL);
+        buttonL.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showDialog(R.drawable.chu_l, "Chữ L");
+            }
+        });
+
         buttonM = (ImageButton) findViewById(R.id.imageButtonM);
         buttonM.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                showDialog(R.drawable.chu_a, "Chữ M");
+                showDialog(R.drawable.chu_m, "Chữ M");
+            }
+        });
+
+        buttonN = (ImageButton) findViewById(R.id.imageButtonN);
+        buttonN.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showDialog(R.drawable.chu_n, "Chữ N");
+            }
+        });
+
+        buttonO = (ImageButton) findViewById(R.id.imageButtonO);
+        buttonO.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showDialog(R.drawable.chu_o, "Chữ O");
+            }
+        });
+
+        buttonP = (ImageButton) findViewById(R.id.imageButtonP);
+        buttonP.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showDialog(R.drawable.chu_p, "Chữ P");
+            }
+        });
+
+        buttonQ = (ImageButton) findViewById(R.id.imageButtonQ);
+        buttonQ.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showDialog(R.drawable.chu_q, "Chữ Q");
+            }
+        });
+
+        buttonR = (ImageButton) findViewById(R.id.imageButtonR);
+        buttonR.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showDialog(R.drawable.chu_r, "Chữ R");
+            }
+        });
+
+        buttonS = (ImageButton) findViewById(R.id.imageButtonS);
+        buttonS.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showDialog(R.drawable.chu_s, "Chữ S");
+            }
+        });
+
+        buttonT = (ImageButton) findViewById(R.id.imageButtonT);
+        buttonT.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showDialog(R.drawable.chu_t, "Chữ T");
+            }
+        });
+
+        buttonU = (ImageButton) findViewById(R.id.imageButtonU);
+        buttonU.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showDialog(R.drawable.chu_u, "Chữ U");
+            }
+        });
+
+        buttonV = (ImageButton) findViewById(R.id.imageButtonV);
+        buttonV.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showDialog(R.drawable.chu_v, "Chữ V");
+            }
+        });
+
+        buttonW = (ImageButton) findViewById(R.id.imageButtonW);
+        buttonW.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showDialog(R.drawable.chu_w, "Chữ W");
             }
         });
 
@@ -105,7 +253,21 @@ public class BangChuCai extends AppCompatActivity {
         buttonX.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                showDialog(R.drawable.chu_a, "Chữ X");
+                showDialog(R.drawable.chu_x, "Chữ X");
+            }
+        });
+
+        buttonY = (ImageButton) findViewById(R.id.imageButtonY);
+        buttonY.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) { showDialog(R.drawable.chu_y, "Chữ Y"); }
+        });
+
+        buttonZ = (ImageButton) findViewById(R.id.imageButtonZ);
+        buttonZ.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showDialog(R.drawable.chu_z, "Chữ Z ");
             }
         });
     }
@@ -124,6 +286,7 @@ public class BangChuCai extends AppCompatActivity {
         textViewMess.setText(s);
         textViewTitle.setText(s);
         buttonOK.setText("OK");
+        ImageButton btnspeak = view.findViewById(R.id.btnspeak);
 
         imageView.setImageResource(a);
 
@@ -141,6 +304,20 @@ public class BangChuCai extends AppCompatActivity {
         }
 
         alertDialog.show();
+        btnspeak.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                textToSpeech = new TextToSpeech(BangChuCai.this, new TextToSpeech.OnInitListener() {
+                    @Override
+                    public void onInit(int status) {
+                        if(status != TextToSpeech.ERROR) {
+                            textToSpeech.setLanguage(Locale.ENGLISH);
+                            textToSpeech.speak(s,TextToSpeech.QUEUE_FLUSH,null);
+                        }
+                    }
+                });
+            }
+        });
     }
 
 }
