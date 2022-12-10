@@ -43,7 +43,7 @@ public class ConVat extends AppCompatActivity {
         buttonE.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                showDialog(R.drawable.con_voi,"con voi");
+                showDialog(R.drawable.voi,"Con voi");
             }
         });
 
@@ -51,7 +51,7 @@ public class ConVat extends AppCompatActivity {
         buttonD.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                showDialog(R.drawable.con_cho,"con chó");
+                showDialog(R.drawable.cho,"Con chó");
             }
         });
 
@@ -59,8 +59,7 @@ public class ConVat extends AppCompatActivity {
         buttonCh.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ConVat.this, ViewMainActivity.class);
-                startActivity(intent);
+                showDialog(R.drawable.ga,"Con gà");
             }
         });
 
@@ -68,8 +67,7 @@ public class ConVat extends AppCompatActivity {
         buttonB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ConVat.this, ViewMainActivity.class);
-                startActivity(intent);
+                showDialog(R.drawable.trau,"Con trâu");
             }
         });
     }
@@ -113,7 +111,7 @@ public class ConVat extends AppCompatActivity {
                     @Override
                     public void onInit(int status) {
                         if(status != TextToSpeech.ERROR) {
-                            textToSpeech.setLanguage(Locale.ENGLISH);
+                            textToSpeech.setLanguage(Locale.forLanguageTag("vi-VN"));
                             textToSpeech.speak(s,TextToSpeech.QUEUE_FLUSH,null);
                         }
                     }

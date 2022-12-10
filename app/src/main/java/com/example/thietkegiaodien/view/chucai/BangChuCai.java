@@ -311,7 +311,7 @@ public class BangChuCai extends AppCompatActivity {
                     @Override
                     public void onInit(int status) {
                         if(status != TextToSpeech.ERROR) {
-                            textToSpeech.setLanguage(Locale.ENGLISH);
+                            textToSpeech.setLanguage(Locale.forLanguageTag("vi-VN"));
                             textToSpeech.speak(s,TextToSpeech.QUEUE_FLUSH,null);
                         }
                     }
