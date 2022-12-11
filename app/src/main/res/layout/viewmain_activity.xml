@@ -51,7 +51,7 @@
         android:id="@+id/button_mau_sac"
         android:layout_width="122dp"
         android:layout_height="83dp"
-        android:layout_marginBottom="392dp"
+        android:layout_marginBottom="368dp"
         android:text="MÀU SẮC"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -62,11 +62,11 @@
         android:id="@+id/button_ve"
         android:layout_width="122dp"
         android:layout_height="83dp"
-        android:layout_marginBottom="280dp"
+        android:layout_marginBottom="240dp"
         android:text="VẼ"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
@@ -84,32 +84,11 @@
         android:id="@+id/button_con_vat"
         android:layout_width="122dp"
         android:layout_height="83dp"
-        android:layout_marginBottom="392dp"
+        android:layout_marginBottom="368dp"
         android:text="CON VẬT"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.826"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
-        android:id="@+id/button_game"
-        android:layout_width="122dp"
-        android:layout_height="83dp"
-        android:layout_marginBottom="280dp"
-        android:text="GAME"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.826"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/button_giao_tiep"
-        android:layout_width="122dp"
-        android:layout_height="83dp"
-        android:layout_marginBottom="172dp"
-        android:text="GIAO TIẾP"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
