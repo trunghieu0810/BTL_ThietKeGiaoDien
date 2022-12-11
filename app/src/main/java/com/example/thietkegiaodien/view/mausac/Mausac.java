@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Adapter;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -27,36 +28,43 @@ import com.example.thietkegiaodien.view.convat.ConVat;
 import com.example.thietkegiaodien.view.sodem.SoDem;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
 
-public class Mausac extends AppCompatActivity implements AdapterView.OnItemClickListener {
+public class Mausac extends AppCompatActivity {
 
     private Button buttonBack;
     private ArrayList<CustomAdapter> list;
     private TextToSpeech textToSpeech;
 
-    public static int[] imgAvatar = {R.drawable.so1, R.drawable.so2,
-            R.drawable.so3, R.drawable.so4, R.drawable.so5, R.drawable.so6,
-            R.drawable.so7, R.drawable.so8, R.drawable.so9, R.drawable.so10};
+    public static int[] imgAvatar = {R.drawable.mau_den, R.drawable.mau_do,
+            R.drawable.mau_vang, R.drawable.mau_xanh, R.drawable.mau_cam, R.drawable.mau_tim,
+            R.drawable.mau_hong};
     //Nội dung của từng Item trong ListView
-    public static String[] tvNoiDung = {"Số một", "Số hai",
-            "Số ba", "Số bốn", "Số năm", "Số sáu",
-            "Số bảy", "Số tám", "Số chín", "Số mười"};
+    public static String[] tvNoiDung = {"Màu đen", "Màu đỏ",
+            "Màu vàng", "Màu xanh", "Màu cam", "Màu tím",
+            "Màu hồng"};
 
     ListView lvCustomListView;
     @Override
-    protected void onCreate(@Nullable Bundle savledInstanceState) {
-        super.onCreate(savledInstanceState);
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
         setContentView(R.layout.mausac_activity);
         //get ListView theo ID từ layout xml
         lvCustomListView = (ListView) findViewById(R.id.lvCustomListView);
         //Khởi tạo đối tượng adapter và gán Data source --> gán Adapter vào Lisview
-        CustomAdapter customAdapter = new CustomAdapter(Mausac.this,tvNoiDung,imgAvatar);
-        lvCustomListView.setAdapter(customAdapter);
-        lvCustomListView.setOnItemClickListener((AdapterView.OnItemClickListener) this);
-        list.add(customAdapter);
+        CustomAdapter adapter = new CustomAdapter(Mausac.this, tvNoiDung, imgAvatar);
+        lvCustomListView.setAdapter(adapter);
+        //lvCustomListView.setAdapter(new CustomAdapter(SoDem.this, tvNoiDung, imgAvatar));
+        List<Adapter> list = new ArrayList<>();
+        list.add(adapter);
 
-
+        lvCustomListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                showDialog(imgAvatar[i], tvNoiDung[i]);
+            }
+        });
         buttonBack = (Button) findViewById(R.id.button_back);
         buttonBack.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -65,11 +73,6 @@ public class Mausac extends AppCompatActivity implements AdapterView.OnItemClick
                 startActivity(intent);
             }
         });
-}
-
-    @Override
-    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-        showDialog(imgAvatar[i], String.valueOf(tvNoiDung));
     }
 
     private void showDialog(int a, String s) {

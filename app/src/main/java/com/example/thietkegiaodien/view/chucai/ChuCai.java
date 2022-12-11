@@ -16,6 +16,7 @@ public class ChuCai extends AppCompatActivity {
 
     private Button buttonHocTap;
     private Button buttonBack;
+    private Button buttonKTra;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -23,6 +24,7 @@ public class ChuCai extends AppCompatActivity {
         setContentView(R.layout.chucai_activity);
         buttonHocTap = (Button) findViewById(R.id.button_bang);
         buttonBack = (Button) findViewById(R.id.button_hoc_tap);
+        buttonKTra = (Button) findViewById(R.id.button_ktra);
 
         buttonHocTap.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -36,6 +38,14 @@ public class ChuCai extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(ChuCai.this, ViewMainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        buttonKTra.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ChuCai.this, KiemTra.class);
                 startActivity(intent);
             }
         });

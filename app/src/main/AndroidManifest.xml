@@ -35,6 +35,8 @@
         <activity android:name=".view.sodem.SoDem"></activity>
         <activity android:name=".basic.CustomAdapter"></activity>
         <activity android:name=".view.ve.DrawingApp"></activity>
+        <activity android:name=".view.chucai.KiemTra"></activity>
+
     </application>
 
 </manifest>
